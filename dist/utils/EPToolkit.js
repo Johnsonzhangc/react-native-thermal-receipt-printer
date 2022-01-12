@@ -26,6 +26,7 @@ var d_end_bytes = Buffer.from([27, 33, 0, 28, 33, 0]);
 var cut_bytes = Buffer.from([27, 105]);
 var beep_bytes = Buffer.from([27, 66, 3, 2]);
 var line_bytes = Buffer.from([10, 10, 10, 10, 10]);
+var codepage_255 = Buffer.from([27, 166, 255]);
 var options_controller = {
     cut: cut_bytes,
     beep: beep_bytes,
@@ -50,6 +51,8 @@ var controller = {
     "</L>": l_end_bytes,
     "<R>": r_start_bytes,
     "</R>": r_end_bytes,
+    "<TH>": codepage_255,
+    "</TH>": codepage_255
 };
 var default_options = {
     beep: false,
