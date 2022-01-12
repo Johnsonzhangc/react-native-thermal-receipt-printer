@@ -32,6 +32,8 @@ const cut_bytes = Buffer.from([27, 105]);
 const beep_bytes = Buffer.from([27, 66, 3, 2]);
 const line_bytes = Buffer.from([10, 10, 10, 10, 10]);
 
+const codepage_255 = Buffer.from([27, 166, 255]);
+
 const options_controller = {
   cut: cut_bytes,
   beep: beep_bytes,
@@ -57,6 +59,8 @@ const controller = {
   "</L>": l_end_bytes,
   "<R>": r_start_bytes,
   "</R>": r_end_bytes,
+  "<TH>": codepage_255,
+  "</TH>": codepage_255
 };
 
 type IOptions = {

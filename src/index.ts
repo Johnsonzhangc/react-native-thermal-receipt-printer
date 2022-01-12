@@ -74,7 +74,8 @@ const textPreprocessingIOS = (text: string) => {
       .replace(/<\/?C>/g, "")
       .replace(/<\/?D>/g, "")
       .replace(/<\/?B>/g, "")
-      .replace(/<\/?M>/g, ""),
+      .replace(/<\/?M>/g, "")
+      .replace(/<\/?TH>/g, ""),
     opts: options,
   };
 };
